@@ -27,12 +27,14 @@ h1 {
 }
 
 .timeline_wrapper {
-  transform: translateX(20%);
+  margin: 0 auto;
+  font-size: 10px;
+  max-width: 100em;
 }
 
 .timeline_monster {
   margin-bottom: -1em;
-  margin-top: -8em;
+  margin-top: -13em;
 }
 
 .timeline_monster img {
@@ -50,7 +52,11 @@ h1 {
 }
 
 .timeline_even {
-  transform: translateX(-35%);
+  transform: translateX(-25%);
+}
+
+.timeline_odd {
+  transform: translateX(25%);
 }
 
 .block-common {
@@ -59,6 +65,54 @@ h1 {
   margin-bottom: 2.7em;
   animation: moving 5s infinite;
   animation-timing-function: linear;
+}
+
+.block-4 {
+  opacity: 0.4;
+  margin: -3em 19em -1.5em 5em;
+}
+
+.block-5 {
+  margin-top: 0em;
+  margin-left: 8em;
+}
+
+.block-6 {
+  margin-top: -5em;
+  margin-left: 32em;
+}
+
+.block-7 {
+  margin-top: -5em;
+  margin-left: 56em;
+}
+
+.block-8 {
+  margin-top: -5em;
+  margin-left: 80em;
+}
+
+.timeline_odd .block-4 {
+  margin-left: 29em;
+}
+
+.timeline_odd .block-5 {
+  margin-left: -16em;
+}
+
+.timeline_odd .block-6 {
+  margin-left: -36em;
+  margin-top: -3em;
+}
+
+.timeline_odd .block-7 {
+  margin-left: -56em;
+  margin-top: -3em;
+}
+
+.timeline_odd .block-8 {
+  margin-left: -76em;
+  margin-top: -3em;
 }
 
 @keyframes moving {
@@ -73,49 +127,20 @@ h1 {
   }
 }
 
-.block-4 {
-  opacity: 0.4;
-  margin: -3em 19em -1.5em 5em;
+@media (max-width: 1000px) {
+  .timeline_wrapper {
+    zoom: 0.8;
+  }
 }
 
-.block-5 {
-  margin-bottom: -1.5em;
+@media (max-width: 768px) {
+  .timeline_wrapper {
+    zoom: 0.6;
+  }
 }
 
-.block-6 {
-  margin-bottom: -1.5em;
-  margin-left: 15em;
-}
-
-.block-7 {
-  margin-bottom: -1.5em;
-  margin-left: 30em;
-}
-
-.block-8 {
-  margin-left: 45em;
-}
-
-.timeline_odd .block-3 {
-  margin: -2em 0 0 0;
-}
-
-.timeline_odd .block-4 {
-  margin: -0.5em -12em 0 0;
-}
-
-.timeline_odd .block-5 {
-  margin: -0.5em 0em 0 0;
-}
-
-.timeline_odd .block-6 {
-  margin: -0.5em 12em 0 0;
-}
-
-.timeline_odd .block-7 {
-  margin: -0.5em 24em 0 0;
-}
-
-.timeline_odd .block-8 {
-  margin: -0.5em 36em 0 0;
+@media (max-width: 550px) {
+  .timeline_wrapper {
+    zoom: 0.4;
+  }
 }
