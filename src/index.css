@@ -1,13 +1,121 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  margin-bottom: 6em;
+}
+
+main {
+  max-width: 100em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+.timeline_wrapper {
+  transform: translateX(20%);
+}
+
+.timeline_monster {
+  margin-bottom: -1em;
+  margin-top: -8em;
+}
+
+.timeline_monster img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.timeline_block {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline_even {
+  transform: translateX(-35%);
+}
+
+.block-common {
+  z-index: -1;
+  position: relative;
+  margin-bottom: 2.7em;
+  animation: moving 5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moving {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.block-4 {
+  opacity: 0.4;
+  margin: -3em 19em -1.5em 5em;
+}
+
+.block-5 {
+  margin-bottom: -1.5em;
+}
+
+.block-6 {
+  margin-bottom: -1.5em;
+  margin-left: 15em;
+}
+
+.block-7 {
+  margin-bottom: -1.5em;
+  margin-left: 30em;
+}
+
+.block-8 {
+  margin-left: 45em;
+}
+
+.timeline_odd .block-3 {
+  margin: -2em 0 0 0;
+}
+
+.timeline_odd .block-4 {
+  margin: -0.5em -12em 0 0;
+}
+
+.timeline_odd .block-5 {
+  margin: -0.5em 0em 0 0;
+}
+
+.timeline_odd .block-6 {
+  margin: -0.5em 12em 0 0;
+}
+
+.timeline_odd .block-7 {
+  margin: -0.5em 24em 0 0;
+}
+
+.timeline_odd .block-8 {
+  margin: -0.5em 36em 0 0;
 }
