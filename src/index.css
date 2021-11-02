@@ -92,6 +92,14 @@ h1 {
   margin-left: 80em;
 }
 
+.timeline_odd .block-2 {
+  margin-left: -5em;
+}
+
+.timeline_odd .block-3 {
+  margin-left: -5em;
+}
+
 .timeline_odd .block-4 {
   margin-left: 29em;
 }
