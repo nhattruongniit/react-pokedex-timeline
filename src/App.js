@@ -1,15 +1,20 @@
-
+import { useWeb3React } from '@web3-react/core';
+import React from 'react';
 
 function App() {
+  const { active, account } = useWeb3React();
+
   return (
     <main>
       <h1>Timeline</h1>
 
+      {active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}
+
       <div className="timeline_wrapper">
         <div className="timeline_container">
-          {Array.from(Array(10).keys()).map(ele => {
+          {Array.from(Array(2).keys()).map(ele => {
             return (
-              <>
+              <React.Fragment key={ele}>
                 {ele % 2 !== 0 ? (
                   <div className="timeline_block timeline_even">
                     <div className="timeline_monster">
@@ -37,7 +42,7 @@ function App() {
                     <img className="block-common block-8" src="assets/images/block-blue.svg" alt="" />
                   </div>
                 )}
-              </>
+              </React.Fragment>
             )
           })}
         </div>
